@@ -1,0 +1,172 @@
+INSERT INTO `game` (`name`, `avr_rate`, `release_date`, `time_played`) VALUES
+('DARK SOUL', NULL, '2015-01-13', NULL),
+( 'BATMAN', NULL, '2021-04-15', NULL),
+('BLACK DESERT', NULL, '2021-09-28', NULL),
+('COUNTER STRIKE: GLOBAL OFFENSIVE', NULL, '2010-03-01', NULL),
+('DARK SOULS 2', NULL, '2021-05-11', NULL),
+('WORLD OF WARCRAFT', NULL, '2003-06-11', NULL),
+('POOL PARTY SIMULATOR', NULL, '2021-11-13', NULL),
+('DOTA 2', NULL, '2011-06-23', NULL),
+('AMONG US', NULL, '2020-12-13', NULL),
+('LIFE IS NOT STRANGE', NULL, '2021-06-23', NULL);
+
+INSERT INTO `development_company` ( `company_name`) VALUES
+('Triangle Enix'),
+('FLAMEZARD'),
+( 'Passivesion'),
+( 'AE'),
+( 'SUbifost');
+
+INSERT INTO `achievements` (`achievement_name`) VALUES
+( '1 hours played'),
+( '3 hours played'),
+( '12 hours played'),
+( '24 hours played');
+
+INSERT INTO `genre` ( `genre_name`) VALUES
+('A-RPG'),
+('MMORPG'),
+( 'Action'),
+( 'FPS'),
+('SIMULATION'),
+('MOBA'),
+('Adventure'),
+('Battle-Royale');
+
+INSERT INTO `hardware_requirement` (`cpu_model`, `gpu_model`, `ram`, `disk_space`) VALUES
+('AMD R1', 'gt530', '2GB', '10 GB'),
+('intel i3', 'gtx760', '4GB', '25 GB'),
+('intel i5', 'gtx970', '8GB', '50 GB'),
+('intel i7', 'rtx2060', '16GB', '100 GB');
+
+INSERT INTO `language` (`language_name`) VALUES
+('Turkish'),
+('English'),
+( 'German'),
+('Azerbaijanese'),
+('Japanese'),
+('French');
+
+INSERT INTO `player` (`name`, `surname`, `suplay_coin`, `birth_date`, `email`, `phone_number`, `region`) VALUES
+('Albert', 'Levi', 400, '1969-08-28', 'albert@sabanciuniv.edu', '+90555444332', 'Turkey'),
+('Yucel', 'Saygin', 500, '1987-06-15', 'y.saygin@sabanciuniv.edu', '+90535362482', 'Turkey'),
+( 'Hamit', 'Kartal', 200, '2001-02-13', 'hamit@sabanciuniv.edu', '+90531964782', 'Turkey'),
+('Yasin', 'Ughur', 200, '2001-07-06', 'yasinughur@sabanciuniv.edu', '+90531947482', 'Azerbaijan'),
+( 'Yigit', 'Karamanli', 200, '2000-01-23', 'yigitkaramanli@sabanciuniv.edu', '+90538329182', 'Turkey'),
+('Oytun Kuday', 'Duran', 250, '2001-10-11', 'oytunkuday@sabanciuniv.edu', '+905309572968', 'Turkey');
+
+
+
+
+
+
+
+
+
+
+
+
+INSERT INTO `develops` (`company_id`, `game_id`) VALUES
+(1, 5),
+(2, 1),
+(3, 6),
+(3, 2),
+(3, 7),
+(3, 8),
+(4, 3),
+(4, 9),
+(5, 4),
+(5, 10);
+
+INSERT INTO `belongs_to` (`game_id`, `genre_id`) VALUES
+(1, 4),
+(2, 4),
+(3, 3),
+(4, 4),
+(5, 1),
+(6, 2),
+(7, 5),
+(8, 6),
+(9, 8),
+(10, 7);
+
+INSERT INTO `supports` (`game_id`, `language_id`) VALUES
+(1, 2),
+(1, 3),
+(2, 2),
+(2, 3),
+(3, 1),
+(3, 2),
+(3, 3),
+(4, 1),
+(4, 2),
+(4, 3),
+(4, 6),
+(5, 2),
+(5, 3),
+(5, 4),
+(5, 5),
+(6, 5),
+(6, 6),
+(7, 2),
+(7, 3),
+(7, 4),
+(7, 5),
+(8, 1),
+(8, 2),
+(8, 3),
+(8, 4),
+(8, 5),
+(8, 6),
+(9, 1),
+(9, 2),
+(9, 3),
+(9, 4),
+(9, 5),
+(9, 6),
+(10, 1),
+(10, 2),
+(10, 4),
+(10, 5);
+
+INSERT INTO `requires` (`game_id`, `requirement_id`) VALUES
+(1, 1),
+(2, 3),
+(3, 2),
+(4, 1),
+(5, 4),
+(6, 1),
+(7, 3),
+(8, 2),
+(9, 1),
+(10, 3);
+
+INSERT INTO `plays` (`game_id`, `player_id`, `date`, `time_played`, `bought_price`) VALUES
+(3, 1, '2021-11-12', 205, 120),
+( 2, 1, '2021-08-12', 200, 100),
+( 3, 2, '2021-09-11', 199, 150),
+( 2, 3, '2021-06-10', 195, 190),
+( 3, 4, '2021-05-11', 180, 210),
+( 4, 5, '2021-04-11', 182, 180),
+(5, 2, '2021-06-11', 67, 230),
+( 6, 1, '2021-07-10', 80, 250),
+(7, 1, '2021-08-10', 92, 210),
+(8, 2, '2021-09-19', 101, 160);
+
+INSERT INTO `owns` (`play_id`, `player_id`, `achievement_id`) VALUES
+(1, 1, 1),
+(1, 1, 2),
+(7, 1, 1),
+(2, 2, 1),
+(2, 2, 2),
+(8, 2, 1),
+(3, 3, 1),
+(3, 3, 2),
+(9, 3, 1),
+(4, 4, 1),
+(4, 4, 2),
+(10, 4, 1),
+(5, 5, 1),
+(5, 5, 2),
+(6, 6, 1),
+(6, 6, 2);
